@@ -14,4 +14,10 @@ then you are able to run:
 
 Or with property values:
 
-`mvn archetype:generate -D archetypeCatalog=local -D groupId=org.yourcompany.android -D artifactId=sample -D androidSdkPath=/path/to/sdk -D gitHost=<your project git hosting> -D gitRepoOwner=<the project owner> -D gitRepoName=<the project repository>`
+    mvn archetype:generate  -D archetypeCatalog=local\ 
+                            -D groupId=org.yourcompany.android\ 
+                            -D artifactId=sample\ 
+                            -D androidSdkPath=/path/to/sdk\ 
+                            -D gitHost=<your project git hosting>\ 
+                            -D gitRepoOwner=<the project owner>\ 
+                            -D gitRepoName=<the project repository>\
