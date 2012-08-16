@@ -14,7 +14,7 @@ then you are able to run:
 
 Or with property values:
 
-    mvn archetype:generate  
+    mvn archetype:generate\  
     -D archetypeCatalog=local\
     -D groupId=org.yourcompany.android\
     -D artifactId=sample\
