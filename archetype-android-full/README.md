@@ -4,13 +4,13 @@ archetype-android-full
 Maven archetype to generate android project and android test project using Robotium.
 In addition all files needed by Eclispe are generated.
 
-1. Run:
+* Run:
 
-`mvn clean install`
+    `mvn clean install`
 
-2. Then you are able to run:
+* Then you are able to run:
 
-`mvn archetype:generate -D archetypeCatalog=local`
+    `mvn archetype:generate -D archetypeCatalog=local`
 
 Or with property values:
 
