@@ -12,6 +12,6 @@ In addition all files needed by Eclispe are generated.
 
     `mvn archetype:generate -D archetypeCatalog=local`
 
-Or with property values:
+    Or with property values:
 
     mvn archetype:generate -D archetypeCatalog=local -D groupId=org.yourcompany.android -D artifactId=sample -D androidSdkPath=path-to-sdk -D gitHost=<project-git-hosting> -D gitRepoOwner=<project-owner> -D gitRepoName=<project-repository>
