@@ -10,6 +10,6 @@ In addition all files needed by Eclipse are generated.
 
 2. Then you are able to run:
 
-      mvn archetype:generate -D archetypeCatalog=local \
-			     -D archetypeGroupId=com.fleurey.android \
-			     -D archetypeArtifactId=archetype-android-simple
+        mvn archetype:generate -D archetypeCatalog=local \
+                               -D archetypeGroupId=com.fleurey.android \
+                               -D archetypeArtifactId=archetype-android-simple
