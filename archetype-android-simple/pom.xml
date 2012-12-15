@@ -8,6 +8,7 @@
   <packaging>maven-archetype</packaging>
   <name>Simple Android archetype</name>
   <description>Simple Android archetype with with release and site generation support</description>
+  <inceptionYear>2012</inceptionYear>
   <url>http://android.fleurey.com</url>
 
   <developers>
