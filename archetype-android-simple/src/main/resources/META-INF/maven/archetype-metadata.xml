@@ -43,6 +43,7 @@
 	<include>AndroidManifest.xml</include>
 	<include>proguard.cfg</include>
 	<include>HEADER</include>
+	<include>project.properties</include>
       </includes>
     </fileSet>
   </fileSets>
