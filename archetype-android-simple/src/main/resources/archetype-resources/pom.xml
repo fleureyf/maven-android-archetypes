@@ -15,8 +15,8 @@
 
   <distributionManagement> 
     <site> 
-      <id>site-pages</id> 
-      <url>android.fleurey.com</url> 
+      <id>id</id> 
+      <url>http://my.url</url> 
     </site> 
   </distributionManagement>
 
@@ -84,7 +84,6 @@
     <maven-checkstyle-plugin.configLocation>reporting/checkstyle.xml</maven-checkstyle-plugin.configLocation>
     <maven-pmd-plugin.configLocation>reporting/pmd.xml</maven-pmd-plugin.configLocation>
 
-    <release>false</release>
     <proguard.skip>true</proguard.skip>
     <checkstyle.skip>true</checkstyle.skip>
     <findbugs.skip>true</findbugs.skip>
@@ -255,10 +254,9 @@
 	    <config>${project.basedir}/proguard.cfg</config>
 	  </proguard>
 	  <sign>
-	    <debug>!${release}</debug>
+	    <debug>false</debug>
 	  </sign>
 	  <zipalign>
-	    <skip>!${release}</skip>
 	    <verbose>true</verbose>
 	    <inputApk>${project.build.directory}/${project.artifactId}-${project.version}.apk</inputApk>
 	    <outputApk>${project.build.directory}/${project.artifactId}-aligned.apk</outputApk>
@@ -289,7 +287,6 @@
 	  </execution>
 	</executions>
 	<configuration>
-	  <skip>!${release}</skip>
 	  <removeExistingSignatures>true</removeExistingSignatures>
 	  <keystore>${sign.keystore}</keystore>
 	  <alias>${sign.alias}</alias>
@@ -311,11 +308,14 @@
 	  <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
 	</configuration>
       </plugin>
+      <!-- Uncomment if you have set a scm connection -->
+      <!--
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-changelog-plugin</artifactId>
 	<version>${plugin.maven-changelog.version}</version>
 	<configuration>
+	  <skip>${scm.disable}</skip>
 	  <type>range</type>
 	  <range>30</range>
 	  <displayFileDetailUrl>${project.scm.url}/tree/master/%FILE%</displayFileDetailUrl>
@@ -323,6 +323,7 @@
 	  <outputEncoding>${project.reporting.outputEncoding}</outputEncoding>
 	</configuration>
       </plugin>
+      -->
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-jxr-plugin</artifactId>
