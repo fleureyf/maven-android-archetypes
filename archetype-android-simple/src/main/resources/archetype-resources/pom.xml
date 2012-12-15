@@ -63,35 +63,35 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     
-    <platform.version>4.0.1.2</platform.version>
+    <platform.version>4.1.1.4</platform.version>
     <jdk.version>1.6</jdk.version>
     
-    <plugin.android-maven.version>3.3.1</plugin.android-maven.version>
+    <plugin.android-maven.version>3.4.0</plugin.android-maven.version>
     <plugin.maven-jarsigner.version>1.2</plugin.maven-jarsigner.version>
     
     <plugin.site.version>3.1</plugin.site.version>
-    <plugin.project-info-reports.version>2.4</plugin.project-info-reports.version>
+    <plugin.project-info-reports.version>2.5</plugin.project-info-reports.version>
     <plugin.checkstyle.version>2.9.1</plugin.checkstyle.version>
     <plugin.findbugs-maven.version>2.5.2</plugin.findbugs-maven.version>
     <plugin.jxr.version>2.3</plugin.jxr.version>
     <plugin.pmd-plugin.version>2.7.1</plugin.pmd-plugin.version>
     <plugin.maven-changelog.version>2.2</plugin.maven-changelog.version>
     <plugin.versions-maven.version>1.3.1</plugin.versions-maven.version>
-    <plugin.javadoc.version>2.8.1</plugin.javadoc.version>
+    <plugin.javadoc.version>2.9</plugin.javadoc.version>
     
     <plugin.license.version>1.10.b1</plugin.license.version>
     <plugin.maven-assembly.version>2.3</plugin.maven-assembly.version>
-    <plugin.maven-ressource.version>2.5</plugin.maven-ressource.version>
+    <plugin.maven-ressource.version>2.6</plugin.maven-ressource.version>
     <plugin.maven-jar.version>2.4</plugin.maven-jar.version>
     <plugin.compiler.version>2.5.1</plugin.compiler.version>
     <plugin.clean.version>2.5</plugin.clean.version>
-    <plugin.install.version>2.3.1</plugin.install.version>
-    <plugin.dependency.version>2.4</plugin.dependency.version>
+    <plugin.install.version>2.4</plugin.install.version>
+    <plugin.dependency.version>2.5</plugin.dependency.version>
     <plugin.deploy.version>2.7</plugin.deploy.version>
     <plugin.enforcer.version>1.0.1</plugin.enforcer.version>
     <plugin.release.version>2.3.2</plugin.release.version>
     <plugin.source.version>2.1.2</plugin.source.version>
-    <plugin.surefire.version>2.12.1</plugin.surefire.version>
+    <plugin.surefire.version>2.12.2</plugin.surefire.version>
   
     <maven-checkstyle-plugin.configLocation>reporting/checkstyle.xml</maven-checkstyle-plugin.configLocation>
     <maven-pmd-plugin.configLocation>reporting/pmd.xml</maven-pmd-plugin.configLocation>
@@ -257,8 +257,7 @@
 	<groupId>com.mycila.maven-license-plugin</groupId>
 	<artifactId>maven-license-plugin</artifactId>
 	<configuration>
-	  <basedir>${headerdir}</basedir>
-	  <header>${headerdir}/HEADER</header>
+	  <header>HEADER</header>
 	  <strictCheck>true</strictCheck>
 	  <properties>
 	    <owner>Owner</owner>
@@ -431,7 +430,7 @@
 	<artifactId>findbugs-maven-plugin</artifactId>
 	<version>${plugin.findbugs-maven.version}</version>
 	<configuration>
-          <targetJdk>${maven.compiler.source}</targetJdk>
+          <targetJdk>${jdk.version}</targetJdk>
 	  <skip>${findbugs.skip}</skip>
 	  <xmlOutput>true</xmlOutput>
 	</configuration>
@@ -442,7 +441,7 @@
 	<version>${plugin.pmd-plugin.version}</version>
 	<configuration>
 	  <skip>${pmd.skip}</skip>
-	  <targetJdk>${maven.compiler.source}</targetJdk>
+	  <targetJdk>${jdk.version}</targetJdk>
 	  <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
 	  <rulesets>
 	    <ruleset>${maven-pmd-plugin.configLocation}</ruleset>
