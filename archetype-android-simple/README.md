@@ -1,8 +1,8 @@
-archetype-android-full
+archetype-android-simple
 ========================
 
-Maven archetype to generate android project and android test project using Robotium.
-In addition all files needed by Eclispe are generated.
+Maven archetype to generate android project ready for release and site generation.
+In addition all files needed by Eclipse are generated.
 
 1. Run:
 
@@ -10,8 +10,6 @@ In addition all files needed by Eclispe are generated.
 
 2. Then you are able to run:
 
-    `mvn archetype:generate -D archetypeCatalog=local`
-
-    Or with property values:
-
-        mvn archetype:generate -D archetypeCatalog=local -D groupId=org.yourcompany.android -D artifactId=sample -D androidSdkPath=path-to-sdk -D gitHost=<project-git-hosting> -D gitRepoOwner=<project-owner> -D gitRepoName=<project-repository>
+    `mvn archetype:generate -D archetypeCatalog=local \
+			    -D archetypeGroupId=com.fleurey.android \
+			    -D archetypeArtifactId=archetype-android-simple`
